@@ -43,8 +43,8 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
         
         {/* Left / Top: Visual Section (Permanently pinned render images) */}
-        <div className="lg:col-span-7 flex flex-col bg-slate-900 relative">
-          <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:h-full min-h-[340px] sm:min-h-[380px] overflow-hidden bg-slate-950 flex flex-col justify-between">
+        <div className="lg:col-span-7 flex flex-col justify-center bg-slate-950 relative">
+          <div className="relative w-full aspect-[4/3] overflow-hidden bg-slate-950 flex flex-col justify-between">
             
             {/* Preload and layer all 3 images for instant, foolproof tab switching */}
             <div className="absolute inset-0">
@@ -54,7 +54,7 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
                   src={`${item.url}?v=20261001`}
                   alt={item.label}
                   referrerPolicy="no-referrer"
-                  className={`w-full h-full object-cover transition-opacity duration-300 absolute inset-0 ${
+                  className={`w-full h-full object-contain transition-opacity duration-300 absolute inset-0 ${
                     activeImageIndex === idx ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'
                   }`}
                 />
