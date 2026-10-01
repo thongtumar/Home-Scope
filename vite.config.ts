@@ -3,13 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import fs from 'fs';
 import {defineConfig, Plugin} from 'vite';
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-export default defineConfig({
-  plugins: [react()],
-  base: '/Home-Scope/', // Tên repository chính xác của bạn
-})
 function imageUploadPlugin(): Plugin {
   return {
     name: 'image-upload-handler',
@@ -110,6 +104,7 @@ Hãy trả lời bằng tiếng Việt từ 2-4 câu ngắn gọn, súc tích, k
 
 export default defineConfig(() => {
   return {
+    base: process.env.GITHUB_ACTIONS ? '/Home-Scope/' : '/',
     plugins: [react(), tailwindcss(), imageUploadPlugin()],
     resolve: {
       alias: {

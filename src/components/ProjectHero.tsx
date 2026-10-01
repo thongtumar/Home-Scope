@@ -9,25 +9,29 @@ interface ProjectHeroProps {
 export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+
   // 3 hardcoded perspective images uploaded by user (permanently pinned to public/)
   const gallery = [
     {
       id: 'goc1',
-      url: '/goc1.png',
+      url: `${baseUrl}goc1.png`,
       label: 'Góc 1: Phối cảnh khuôn viên xanh và công trình',
       caption: 'Hình minh họa trong tình huống nghiên cứu',
       tabLabel: 'Góc 1',
     },
     {
       id: 'goc2',
-      url: '/goc2.png',
+      url: `${baseUrl}goc2.png`,
       label: 'Góc 2: Mặt đứng công trình & ban công đón sáng tự nhiên',
       caption: 'Hình minh họa trong tình huống nghiên cứu',
       tabLabel: 'Góc 2',
     },
     {
       id: 'goc3',
-      url: '/goc3.png',
+      url: `${baseUrl}goc3.png`,
       label: 'Góc 3: Khu vực nội khu & đường dạo bộ cây xanh',
       caption: 'Hình minh họa trong tình huống nghiên cứu',
       tabLabel: 'Góc 3',

@@ -2,5 +2,7 @@
   "name": "HomeScope - Nghiên Cứu Tính Minh Bạch Dữ Liệu Bất Động Sản",
   "description": "Giao diện kích thích thực nghiệm học thuật phục vụ khảo sát tác động của tính minh bạch dữ liệu hỗ trợ bởi AI đến ý định mua nhà ở xanh.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
