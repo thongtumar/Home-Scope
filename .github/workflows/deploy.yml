@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
 
-# Cấp quyền đọc và viết để GitHub Actions có thể đẩy file build lên Pages
 permissions:
   contents: write
 
@@ -19,7 +18,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'npm'
+          # Đã xóa dòng cache: 'npm' ở đây để bỏ qua bước kiểm tra file lock
 
       - name: Install dependencies
         run: npm install
