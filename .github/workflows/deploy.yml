@@ -21,7 +21,7 @@ jobs:
           # Đã xóa dòng cache: 'npm' ở đây để bỏ qua bước kiểm tra file lock
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build
         run: npm run build
