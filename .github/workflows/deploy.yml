@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# Cấp quyền đọc và viết để GitHub Actions có thể đẩy file build lên Pages
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
