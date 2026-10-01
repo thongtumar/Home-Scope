@@ -17,21 +17,21 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
   const gallery = [
     {
       id: 'goc1',
-      url: `${baseUrl}goc1.png`,
+      url: `${baseUrl}goc1.jpg`,
       label: 'Góc 1: Phối cảnh khuôn viên xanh và công trình',
       caption: 'Hình minh họa trong tình huống nghiên cứu',
       tabLabel: 'Góc 1',
     },
     {
       id: 'goc2',
-      url: `${baseUrl}goc2.png`,
+      url: `${baseUrl}goc2.jpg`,
       label: 'Góc 2: Mặt đứng công trình & ban công đón sáng tự nhiên',
       caption: 'Hình minh họa trong tình huống nghiên cứu',
       tabLabel: 'Góc 2',
     },
     {
       id: 'goc3',
-      url: `${baseUrl}goc3.png`,
+      url: `${baseUrl}goc3.jpg`,
       label: 'Góc 3: Khu vực nội khu & đường dạo bộ cây xanh',
       caption: 'Hình minh họa trong tình huống nghiên cứu',
       tabLabel: 'Góc 3',
