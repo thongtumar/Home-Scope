@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Building2, Maximize2, Layers, CheckCircle } from 'lucide-react';
 import { ProjectSpec } from '../types';
 
 interface ProjectHeroProps {
@@ -54,7 +53,7 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
                   src={`${item.url}?v=20261001`}
                   alt={item.label}
                   referrerPolicy="no-referrer"
-                  className={`w-full h-full object-contain transition-opacity duration-300 absolute inset-0 ${
+                  className={`w-full h-full object-contain absolute inset-0 ${
                     activeImageIndex === idx ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0'
                   }`}
                 />
@@ -98,16 +97,16 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
           </div>
         </div>
 
-        {/* Right: Neutral Project Specs & Confound-Free Price */}
+        {/* Right: Neutral Project Specs */}
         <div className="lg:col-span-5 p-6 sm:p-7 flex flex-col justify-between bg-white">
           <div>
-            {/* Project Status Badge */}
-            <div className="flex items-center gap-2 mb-2.5">
+            {/* Project Badge */}
+            <div className="flex flex-wrap items-center gap-2 mb-2.5">
               <span className="text-[11px] font-semibold tracking-wider uppercase bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded-md border border-emerald-200">
-                Dự án căn hộ sinh thái cao cấp
+                Dự án mô phỏng
               </span>
-              <span className="text-xs text-slate-400">·</span>
-              <span className="text-xs text-slate-500">Mã thông tin: APG-2026</span>
+              <span className="hidden sm:inline text-xs text-slate-400">·</span>
+              <span className="text-xs text-slate-500">Mã thông tin: {spec.code}</span>
             </div>
 
             <h1 className="text-2xl sm:text-[26px] font-bold text-slate-900 tracking-tight leading-snug">
@@ -121,16 +120,8 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
             {/* Structured Specifications Grid */}
             <div className="mt-6 grid grid-cols-2 gap-3 text-xs">
               <div className="bg-slate-50/90 p-3 rounded-xl border border-slate-100">
-                <span className="text-slate-500 block text-[11px] mb-0.5">Vị trí</span>
-                <span className="font-semibold text-slate-800 text-[13px]">TP. Thủ Đức, TP. Hồ Chí Minh</span>
-              </div>
-              <div className="bg-slate-50/90 p-3 rounded-xl border border-slate-100">
                 <span className="text-slate-500 block text-[11px] mb-0.5">Loại hình</span>
                 <span className="font-semibold text-slate-800 text-[13px]">{spec.projectType}</span>
-              </div>
-              <div className="bg-slate-50/90 p-3 rounded-xl border border-slate-100">
-                <span className="text-slate-500 block text-[11px] mb-0.5">Diện tích căn hộ</span>
-                <span className="font-semibold text-slate-800 text-[13px] tabular-nums">{spec.unitArea}</span>
               </div>
               <div className="bg-slate-50/90 p-3 rounded-xl border border-slate-100">
                 <span className="text-slate-500 block text-[11px] mb-0.5">Quy mô</span>
@@ -139,21 +130,10 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ spec }) => {
             </div>
           </div>
 
-          {/* Realistic Price Display */}
+          {/* Note on intentionally omitted commercial information */}
           <div className="mt-6 pt-4 border-t border-slate-100 bg-slate-50/90 -mx-6 -mb-6 sm:-mx-7 sm:-mb-7 p-4 sm:px-7 rounded-b-2xl">
-            <div className="flex items-baseline justify-between gap-2">
-              <span className="text-[11px] text-slate-600 uppercase font-bold tracking-wide">
-                Mức giá
-              </span>
-              <span className="text-[11px] text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/70">
-                Giá mở bán đợt 1
-              </span>
-            </div>
-            <div className="mt-1 text-base sm:text-lg font-bold text-slate-900 flex items-baseline gap-2">
-              <span>{spec.priceNote}</span>
-            </div>
-            <p className="text-[11.5px] text-slate-500 mt-1">
-              Khoảng 3,2 – 4,8 tỷ VNĐ/căn (căn hộ 2 – 3 phòng ngủ tiêu chuẩn bàn giao hoàn thiện cao cấp).
+            <p className="text-[12px] text-slate-600 leading-relaxed">
+              Vị trí, diện tích và giá bán không được hiển thị trong tình huống này. Vui lòng giả định các yếu tố này phù hợp với nhu cầu của anh/chị, theo hướng dẫn ở đầu trang.
             </p>
           </div>
         </div>
